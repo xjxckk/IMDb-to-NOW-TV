@@ -18,6 +18,6 @@ You will need Python, Selenium & Beautiful Soup installed.
 * To check for false positives refine your new list by Not in watchlist (under You and This List).
 
 ## To improve
-* Check for exact title match (compare dropdown item with title.beginswith)
+* Check for exact title match (compare dropdown item with title.beginswith method)
 * Add year for less false positives (could be done from the maft.uk movie page)
 * Scrape movies from watchlist url.
