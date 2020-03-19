@@ -13,7 +13,6 @@ print("https://github.com/xjxckk/IMDb-watchlist-filtered-for-NOW-TV-availability
 config = open("config.txt", "r+").read().splitlines()
 email = config[1]
 password = config[3]
-# list = config[5]
 
 options = Options()
 options.add_argument("--headless")
@@ -30,7 +29,10 @@ time.sleep(1)
 driver.find_element_by_id("ap_password").send_keys(password)
 time.sleep(1)
 driver.find_element_by_id("signInSubmit").click()
-# driver.get(list)
+driver.get("https://www.imdb.com/list/create?ref_=uspf_cr_ls_wdg")
+driver.find_element_by_id("list-create-name").send_keys("NOW TV Watchlist")
+driver.find_element_by_id("list-create-description").send_keys("Your IMDb watchlist filtered for NOW TV availability.\n\nhttps://github.com/xjxckk/IMDb-watchlist-filtered-for-NOW-TV-availability")
+driver.find_element_by_css_selector("#list-create-form > button").click()
 
 with open("A:\\Downloads\\watchlist.csv") as watchlist:
     reader = csv.reader(watchlist)
@@ -47,7 +49,7 @@ with open("A:\\Downloads\\watchlist.csv") as watchlist:
 
         match = soup.select_one(".wrapper > section:nth-child(4) > em:nth-child(2) > strong:nth-child(1)").text
         if match == "1 match":
-            print(match)
+            print("Found", match)
             driver.find_element_by_id("add-to-list-search").send_keys(title)
             time.sleep(3)
             print(driver.find_element_by_class_name("search_item").text)
