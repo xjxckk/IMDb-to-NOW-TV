@@ -1,0 +1,6 @@
+// Put your IMDb email here:
+email
+// Put your IMDb password here:
+password
+// Put the link to your new NOW TV list here:
+list
