@@ -47,6 +47,7 @@ with open("A:\\Downloads\\watchlist.csv") as watchlist:
         soup = BeautifulSoup(response.text, "html.parser")
         type(soup)
 
+        count = 0
         match = soup.select_one(".wrapper > section:nth-child(4) > em:nth-child(2) > strong:nth-child(1)").text
         if match == "1 match":
             print("Found", match)
@@ -54,3 +55,7 @@ with open("A:\\Downloads\\watchlist.csv") as watchlist:
             time.sleep(3)
             print(driver.find_element_by_class_name("search_item").text)
             driver.find_element_by_class_name("search_item").click()
+            count = count + 1
+
+print("Finished, added", count, 'items to your new list called "NOW TV Watchlist".')
+driver.quit()
