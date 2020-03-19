@@ -19,6 +19,6 @@ Access your new list by clicking your username for the dropdown on IMDb and clic
 Enjoy!
 
 ## Misc
-Uses [nowtv.maft.uk](ad) to check for NOW TV availability.
+Uses [nowtv.maft.uk](nowtv.maft.uk) to check for NOW TV availability.
 
 To check for false positives refine your new list by Not in watchlist (under You and This List).
