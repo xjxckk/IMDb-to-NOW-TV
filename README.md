@@ -21,3 +21,4 @@ You will need Python, Selenium & Beautiful Soup installed.
 * Check for exact title match (compare dropdown item with title.beginswith method)
 * Add year for less false positives (could be done from the maft.uk movie page)
 * Scrape movies from watchlist url.
+* Output added movies to disk to avoid adding dupes on multiple runs
