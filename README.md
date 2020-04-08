@@ -1,6 +1,6 @@
 ## Your IMDb watchlist filtered for NOW TV availability.
 This script checks all movies and TV shows on your IMDb watchlist and checks if they are available on Now TV.
-If they are they will be added to a seperate list.
+If they are they will be added to a separate list.
 
 ### Installation
 You will need Python, Selenium & Beautiful Soup installed.
